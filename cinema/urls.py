@@ -13,9 +13,9 @@ router = routers.DefaultRouter()
 
 router.register("movies", MovieViewSet, basename="movies")
 router.register("movie_sessions", MovieSessionViewSet, basename="movie_sessions")
-router.register("Actors", ActorViewSet, basename="Actors")
-router.register("Genres", GenreViewSet, basename="Genres")
-router.register("CinemaHall", CinemaHallViewSet, basename="CinemaHall")
+router.register("Actors", ActorViewSet, basename="actors")
+router.register("Genres", GenreViewSet, basename="genres")
+router.register("CinemaHall", CinemaHallViewSet, basename="cinemaHall")
 
 urlpatterns = [path("", include(router.urls))]
 
