@@ -31,7 +31,7 @@ class MovieListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = "__all__"
+        fields = ["title", "description", "duration"]
 
 
 class MovieDetailSerializer(serializers.ModelSerializer):
@@ -40,7 +40,7 @@ class MovieDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = "__all__"
+        fields = ["title", "description", "duration"]
 
 
 class MovieSessionListSerializer(serializers.ModelSerializer):
@@ -52,7 +52,7 @@ class MovieSessionListSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MovieSession
-        fields = "__all__"
+        fields = ["show_time", "movie", "cinema_hall"]
 
 
 class MovieSessionDetailSerializer(serializers.ModelSerializer):
@@ -61,4 +61,4 @@ class MovieSessionDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = MovieSession
-        fields = "__all__"
+        fields = ["show_time", "movie", "cinema_hall"]
